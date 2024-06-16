@@ -19,19 +19,21 @@
     <div class="image">
       <img src="<?php echo "images/post/".$image ?>" alt="image">
     </div>
-    <div>
-      <?php echo $title; ?>
-    </div>
-    <div>
-      <?php echo $desc; ?>
-    </div>
-    <div>
-      Posted by:
-      <?php echo $user; ?>
-    </div>
-    <div>
-      Created in:
-      <?php echo $date; ?>
+    <div class="text">
+      <div class="title">
+        <?php echo $title; ?>
+      </div>
+      <div class="description">
+        <?php echo $desc; ?>
+      </div>
+      <div class="user">
+        Posted by:
+        <?php echo $user; ?>
+      </div>
+      <div class="date">
+        Created in:
+        <?php echo $date; ?>
+      </div>
     </div>
   </div>
 

@@ -29,7 +29,7 @@
   display: block;
 }
 
-.body .content .title{
+.body .content.home .title{
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -44,18 +44,22 @@
 
 .body .content .grid{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   gap: 50px;
   padding: 50px;
 }
 
 .body .content .grid-item{
+  display: flex;
+  height: auto;
+  width: auto;
   padding: 15px;
+  gap: 25px;
 }
 
 .body .content .grid-item .image{
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
   object-fit:cover;
   object-position:50% 50%;
 }
@@ -63,4 +67,15 @@
 .body .content .grid-item img{
   height: 100%;
   width: 100%;
+}
+
+.body .content .grid-item .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.body .content .grid-item .title{
+  font-weight: bold;
+  font-size: 30px;
 }
