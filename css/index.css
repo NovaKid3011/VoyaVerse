@@ -82,6 +82,7 @@
 
 section {
   padding: 20px 0;
+  display: block;
 }
 
 .about-us,
