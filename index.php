@@ -7,7 +7,7 @@
   <title>VoyaVerse</title>
 </head>
 <body>
-  
+
 <?php
 include_once 'includes/message.php';
 ?>
@@ -45,7 +45,7 @@ include_once 'includes/message.php';
 
 <div class="footer">
   <?php
-    include "includes/footer.php";
+    include "../includes/footer.php";
   ?>
 </div>
 
