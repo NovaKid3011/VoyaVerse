@@ -27,7 +27,7 @@ class register{
   }
 
   public function isUserExists($email){
-    $checkUser = "SELECT email FROM  Users WHERE email = '$email' LIMIT 1";
+    $checkUser = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
     $result = $this->conn->query($checkUser);
     if($result->num_rows > 0){
       return true;
