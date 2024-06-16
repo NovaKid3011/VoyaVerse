@@ -19,7 +19,7 @@
 .body .content{
   display: none;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-size: 20px;
   padding: 20px;
   background-color: aliceblue;
@@ -82,7 +82,6 @@
 
 section {
   padding: 20px 0;
-  display: block;
 }
 
 .about-us,
