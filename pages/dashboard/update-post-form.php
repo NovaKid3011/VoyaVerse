@@ -19,7 +19,7 @@ if(!isset($_SESSION['authenticated'])){
 
     <h1>Post</h1>
 
-    <form action="../../config/dashboard/update-post.php" method="post" enctype="multipart/form-data">
+    <form action="../../config/dashboard/update-post.php?updateid=<?php echo $_GET['updateid'] ?>" method="post" enctype="multipart/form-data">
       <div class="title">
         <input type="text" name="new_title" placeholder="Enter your title">
       </div>
@@ -30,7 +30,7 @@ if(!isset($_SESSION['authenticated'])){
         <input type="file" name="new_image">
       </div>
 
-      <button type="submit" name="update">Add Post</button>
+      <button type="submit" name="update">Update Post</button>
       <button type="button" onclick="window.location.href = '../dashboard.php?tab=3'">Back</button>
     </form>
 

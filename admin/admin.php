@@ -77,7 +77,29 @@ class admin{
 
   }
 
-  public function update_post(){
+  public function update_post($post_id, $title, $desc, $image, $message, $page){
+    $id = $post_id;
+
+    $extension = substr($image,strlen($image)-4,strlen($image));
+    $allowed_extensions = array(".jpg","jpeg",".png",".gif");
+    if(!in_array($extension,$allowed_extensions)){
+      echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    }else{
+      $imgnewfile=md5($image).$extension;
+      $move = move_uploaded_file($_FILES["new_image"]["tmp_name"],"../../images/post/".$imgnewfile);
+    }
+
+    if(!$move){
+      echo "Not uploaded because of error #".$_FILES["image"]["error"];
+    }else{
+      $sql = "UPDATE Posts SET Title = '$title', Description = '$desc', Image = '$imgnewfile' WHERE ID = '$id'";
+      $result = $this->conn->query($sql);
+      if($result){
+        redirect($message, $page);
+      }else{
+        redirect("Something went wrong.", $page);
+      }
+    }
 
   }
 
