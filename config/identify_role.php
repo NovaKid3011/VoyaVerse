@@ -15,7 +15,7 @@ class role{
       $user_id = $_SESSION['auth_user']['user_id'];
     }
 
-    $checkAdmin = "SELECT ID,Role FROM Users WHERE ID = '$user_id' AND Role = '1' LIMIT 1";
+    $checkAdmin = "SELECT ID,Role FROM users WHERE ID = '$user_id' AND Role = '1' LIMIT 1";
     $result = $this->conn->query($checkAdmin);
     if($result->num_rows == 1){
       return true;

@@ -15,7 +15,7 @@ class fetch{
       $email = $_SESSION['email'];
     }
 
-    $sqlImage = "SELECT * FROM Users WHERE email = '$email'";
+    $sqlImage = "SELECT * FROM users WHERE email = '$email'";
     $result = $this->conn->query($sqlImage);
     if($result->num_rows > 0){
       $image = $result->fetch_assoc();

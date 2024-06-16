@@ -21,7 +21,7 @@
         $role = new role();
         $identify = $role->identify();
         if($identify){
-          $query = "SELECT * FROM Posts";
+          $query = "SELECT * FROM posts";
           $result = $role->conn->query($query);
           if($result){
             while($row = $result->fetch_assoc()){
@@ -52,7 +52,7 @@
           $fname = $_SESSION['auth_user']['user_fname'];
           $lname = $_SESSION['auth_user']['user_lname'];
 
-          $query = "SELECT * FROM Posts WHERE User = '$fname $lname'";
+          $query = "SELECT * FROM Posts WHERE user = '$fname $lname'";
           $result = $role->conn->query($query);
           if($result){
             while($row = $result->fetch_assoc()){

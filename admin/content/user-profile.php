@@ -6,7 +6,7 @@ $user_id = $_SESSION['auth_user']['user_id'];
 
 
 $db = new databaseConnection();
-$query = "SELECT * FROM Users WHERE ID = '$user_id'";
+$query = "SELECT * FROM users WHERE ID = '$user_id'";
 $result = $db->conn->query($query);
 if($result){
     $row = $result->fetch_assoc();

@@ -11,7 +11,7 @@ class login{
   }
 
   public function userLogin($email, $password){
-    $checkLogin = "SELECT * FROM Users WHERE email = '$email' LIMIT 1";
+    $checkLogin = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
     $result = $this->conn->query($checkLogin);
     if($result->num_rows > 0){
       $data = $result->fetch_assoc();

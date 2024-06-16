@@ -29,7 +29,7 @@ class admin{
     if(!$move){
       echo "Not uploaded because of error #".$_FILES["new_photo"]["error"];
     }else{
-      $sql = "UPDATE Users SET First_name = '$fname', Last_name = '$lname', Photo = '$imgnewfile', Gender = '$gender', Email = '$email', Role = '$role' WHERE ID = '$id'";
+      $sql = "UPDATE users SET First_name = '$fname', Last_name = '$lname', Photo = '$imgnewfile', Gender = '$gender', Email = '$email', Role = '$role' WHERE ID = '$id'";
       $result = $this->conn->query($sql);
       if($result){
         redirect($message, $page);
@@ -61,7 +61,7 @@ class admin{
     if(!$move){
       echo "Not uploaded because of error #".$_FILES["new_photo"]["error"];
     }else{
-      $sql = "UPDATE Users SET First_name = '$fname', Last_name = '$lname', Photo = '$imgnewfile', Gender = '$gender', Email = '$email' WHERE ID = '$id'";
+      $sql = "UPDATE users SET First_name = '$fname', Last_name = '$lname', Photo = '$imgnewfile', Gender = '$gender', Email = '$email' WHERE ID = '$id'";
       $result = $this->conn->query($sql);
       if($result){
         redirect($message, $page);
@@ -74,7 +74,7 @@ class admin{
   public function delete_user($user_id, $message, $page){
     $id = $user_id;
 
-    $sql = "DELETE FROM Users WHERE ID = '$id'";
+    $sql = "DELETE FROM users WHERE ID = '$id'";
     $result = $this->conn->query($sql);
     if($result){
       redirect($message, $page);
@@ -97,7 +97,7 @@ class admin{
     if(!$move){
       echo "Not uploaded because of error #".$_FILES["image"]["error"];
     }else{
-      $sql = "INSERT INTO Posts (Title, Description, Image, User)
+      $sql = "INSERT INTO posts (Title, Description, Image, User)
       VALUES ('$title', '$desc', '$imgnewfile', '$username')";
       $result = $this->conn->query($sql);
       if($result){
@@ -124,7 +124,7 @@ class admin{
     if(!$move){
       echo "Not uploaded because of error #".$_FILES["image"]["error"];
     }else{
-      $sql = "UPDATE Posts SET Title = '$title', Description = '$desc', Image = '$imgnewfile' WHERE ID = '$id'";
+      $sql = "UPDATE posts SET Title = '$title', Description = '$desc', Image = '$imgnewfile' WHERE ID = '$id'";
       $result = $this->conn->query($sql);
       if($result){
         redirect($message, $page);
@@ -138,7 +138,7 @@ class admin{
   public function delete_post($user_id, $message, $page){
     $id = $user_id;
 
-    $sql = "DELETE FROM Posts WHERE ID = '$id'";
+    $sql = "DELETE FROM posts WHERE ID = '$id'";
     $result = $this->conn->query($sql);
     if($result){
       redirect($message, $page);

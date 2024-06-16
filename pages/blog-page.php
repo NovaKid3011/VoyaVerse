@@ -3,7 +3,7 @@
 <div class="grid">
   <?php
     $db = new databaseConnection();
-    $query = "SELECT * FROM Posts";
+    $query = "SELECT * FROM posts";
     $result = $db->conn->query($query);
     if($result){
       while($row = $result->fetch_assoc()){

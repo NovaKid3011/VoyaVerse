@@ -18,7 +18,7 @@
         $role = new role();
         $identify = $role->identify();
         if($identify){
-          $query = "SELECT * FROM Users";
+          $query = "SELECT * FROM users";
           $result = $role->conn->query($query);
           if($result){
             while($row = $result->fetch_assoc()){

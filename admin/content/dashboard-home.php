@@ -4,7 +4,7 @@
   <div>Total Users:</div>
   <div>
     <?php
-      $sql = "SELECT * FROM Users";
+      $sql = "SELECT * FROM users";
       $result = $role->conn->query($sql);
       if($result){
         $row = $result->num_rows;
@@ -19,7 +19,7 @@
   <div>Total Posts:</div>
   <div>
     <?php
-      $sql = "SELECT * FROM Posts";
+      $sql = "SELECT * FROM posts";
       $result = $role->conn->query($sql);
       if($result){
         $row = $result->num_rows;
