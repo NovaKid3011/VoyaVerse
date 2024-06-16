@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
 }
 
 if(!defined('SITE_URL')){
-  define('SITE_URL','http://localhost/VoyaverseProject/');
+  define('SITE_URL','http://voyaverse.webactivities.online/');
 }
 
 class databaseConnection{
