@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+}
+
+.body{
+  padding-top: 100px;
+}
+
+.body .content{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  font-size: 20px;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.body .content.active{
+  display: block;
+}
+
+.body .content .title{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body .content.active.blog{
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.body .content .grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+  padding: 50px;
+}
+
+.body .content .grid-item{
+  padding: 15px;
+}
+
+.body .content .grid-item .image{
+  height: 200px;
+  width: 300px;
+  object-fit:cover;
+  object-position:50% 50%;
+}
+
+.body .content .grid-item img{
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,189 @@
+nav{
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+nav .logo h1{
+  font-size: 30px;
+  color: #028580;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav .tabs ul{
+  display: flex;
+}
+
+nav .tabs ul li{
+  padding: 10px;
+  margin: 0 5px;
+}
+
+nav .tabs ul li a{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav .tabs ul li .link.active{
+  color: #000000;
+}
+
+.link:link,
+.link:visited {
+  color: #7c7c7c;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.link:hover{
+  color: #028580;
+  transition: .2s all ease-out;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #028580;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: .2s all ease-out;
+}
+
+.link:hover::after {
+  transform: scale(1);
+}
+
+nav .dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+nav .dropdown a{
+  font-size: 20px;
+}
+
+nav .dropdown .user{
+  display: flex;
+}
+
+nav .dropdown .user-profile{
+  color: #028580;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+}
+
+nav .dropdown .photo{
+  height: 50px;
+  width: 50px;
+  object-fit:cover;
+  object-position:50% 50%;
+}
+
+nav .dropdown img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+nav .dropdown .dropdown-content{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  right: 0;
+}
+
+nav .dropdown:hover .dropdown-content{
+  display: block;
+  background-color: #028580;
+  transition: .2s all ease-out;
+  min-width: 160px;
+}
+
+nav .dropdown .dropdown-content li{
+  cursor: pointer;
+}
+
+nav .dropdown .dropdown-content li:hover{
+  background-color: black;
+  transition: .2s all ease-out;
+}
+
+nav .dropdown .dropdown-content li a{
+  display: flex;
+  padding: 10px 15px;
+  color: white;
+}
+
+nav .user ul{
+  display: flex;
+}
+
+nav .user ul li{
+  margin: 0 5px;
+}
+
+nav .user ul li a{
+  display: block;
+  padding: 0 15px;
+  line-height: 46px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px solid #028580;
+  color: #7c7c7c;
+  font-family: arial;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  text-transform: uppercase;
+  transition: all .35s;
+}
+
+nav .user ul li a:before,
+nav .user ul li a:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #028580;
+  z-index: -1;
+  transition: all .35s;
+}
+
+nav .user ul li a:before{
+  opacity: .5;
+}
+
+nav .user ul li a:after{
+  transition-delay: .2s;
+}
+
+nav .user ul li a:hover{
+  color: #fff;
+}
+
+nav .user ul li a:hover:before,
+nav .user ul li a:hover:after{
+  top: 0;
+}
+
+nav .user .wrapper{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
