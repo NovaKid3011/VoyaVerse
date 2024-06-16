@@ -6,7 +6,6 @@ nav{
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  list-style: none;
 }
 
 nav .logo h1{
@@ -17,11 +16,13 @@ nav .logo h1{
 
 nav .tabs ul{
   display: flex;
+  list-style: none;
 }
 
 nav .tabs ul li{
   padding: 10px;
   margin: 0 5px;
+  list-style: none;
 }
 
 nav .tabs ul li a{
