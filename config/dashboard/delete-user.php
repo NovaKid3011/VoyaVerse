@@ -13,7 +13,7 @@ if(!isset($_SESSION['authenticated'])){
   
       $admin = new admin();
       $message = "The user has been deleted.";
-      $page = "pages/dashboard.php?tab=5";
+      $page = "pages/dashboard.php?tab=4";
       $admin->delete_user($user_id, $message, $page);
     }
   }else{

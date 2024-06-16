@@ -158,11 +158,20 @@
   justify-content: center;
 }
 
+.tab-content .box-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .tab-content .box{
   border: 1px solid;
   border-radius: 25px;
   padding: 20px;
   background-color: #00a6a1;
+}
+
+.tab-content .box.home h1{
+  font-size: 40px;
 }
 
 .tab-content.content2 .box .column{
