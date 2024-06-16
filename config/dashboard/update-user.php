@@ -3,7 +3,7 @@ include '../../admin/admin.php';
 include '../fetch_image.php';
 
 if(!isset($_SESSION['authenticated'])){
-  head('pages/dashboard.php');
+  head('index.php');
 }else{
   $role = new role();
   $identify = $role->identify();
@@ -26,6 +26,20 @@ if(!isset($_SESSION['authenticated'])){
       }else{
         $page = "pages/dashboard/update-user-form.php";
         redirect("Something wrong with the ID", $page);
+      }
+    }elseif($_POST['update_profile']){
+      if(isset($_GET['updateid'])){
+        $user_id = $_GET['updateid'];
+
+        $fname = $_POST['new_fname'];
+        $lname = $_POST['new_lname'];
+        $photo = $_FILES['new_photo']['name'];
+        $gender = $_POST['new_gender'];
+        $email = $_POST['new_email'];
+
+        $admin = new admin();
+        $message = "The user has been updated.";
+        $page = "pages/dashboard.php?tab=2";
       }
     }else{
       $page = "pages/dashboard.php?tab=4";

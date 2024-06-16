@@ -73,6 +73,12 @@ if($result){
     </div>
   </div>
 
+  <div class="column">
+    <div>
+      <a href="dashboard/update-userprofile-form.php?updateid=<?php echo $user_id; ?>">Edit Profile</a>
+    </div>
+  </div>
+
 </div>
 
 <?php

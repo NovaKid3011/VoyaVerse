@@ -39,6 +39,38 @@ class admin{
     }
   }
 
+  public function update_userprofile($user_id, $message, $page, $fname, $lname, $photo, $gender, $email){
+    $id = $user_id;
+
+    $_SESSION['auth_user'] = [
+      'user_fname' => $fname,
+      'user_lname' => $lname,
+    ];
+
+    $_SESSION['email'] = $email;
+
+    $extension = substr($photo,strlen($photo)-4,strlen($photo));
+    $allowed_extensions = array(".jpg","jpeg",".png",".gif");
+    if(!in_array($extension,$allowed_extensions)){
+      echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+    }else{
+      $imgnewfile=md5($photo).$extension;
+      $move = move_uploaded_file($_FILES["new_photo"]["tmp_name"],"../../images/profile/".$imgnewfile);
+    }
+
+    if(!$move){
+      echo "Not uploaded because of error #".$_FILES["new_photo"]["error"];
+    }else{
+      $sql = "UPDATE Users SET First_name = '$fname', Last_name = '$lname', Photo = '$imgnewfile', Gender = '$gender', Email = '$email' WHERE ID = '$id'";
+      $result = $this->conn->query($sql);
+      if($result){
+        redirect($message, $page);
+      }else{
+        redirect("Something went wrong.", $page);
+      }
+    }
+  }
+
   public function delete_user($user_id, $message, $page){
     $id = $user_id;
 
