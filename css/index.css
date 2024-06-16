@@ -79,3 +79,134 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+section {
+  padding: 20px 0;
+}
+
+.about-us,
+.our-story,
+.statistics,
+.video,
+.testimonials,
+.recent-trips {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.about-us h2,
+.our-story h2,
+.video h2,
+.recent-trips h2 {
+  color: #333;
+}
+
+.about-us p {
+  font-size: 18px;
+}
+
+.statistics .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.stat {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.stat h3 {
+  color: #333;
+}
+
+.service,
+.testimonial,
+.trip {
+  margin: 20px 0;
+}
+
+.statistics {
+  background: #333;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.statistics .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #444;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.stat:hover {
+  transform: scale(1.1);
+}
+
+.stat h3 {
+  font-size: 40px;
+  margin: 0;
+  color: #77aaff;
+}
+
+.stat p {
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+.testimonials {
+  background: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 20px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  text-align: right;
+}
+
+.testimonial h4::before {
+  content: "— ";
+}
