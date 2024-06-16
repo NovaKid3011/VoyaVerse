@@ -20,7 +20,7 @@ class register{
       move_uploaded_file($_FILES["photo"]["tmp_name"],"../images/profile/".$imgnewfile);
     }
 
-    $register_query = "INSERT INTO Users (First_name, Last_name, Photo, Gender, Email, Password)
+    $register_query = "INSERT INTO users (First_name, Last_name, Photo, Gender, Email, Password)
     VALUES ('$fname', '$lname', '$imgnewfile', '$gender', '$email', '$password')";
     $result = $this->conn->query($register_query);
     return $result;
