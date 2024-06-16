@@ -1,7 +1,3 @@
-<?php
-include_once 'includes/message.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +7,11 @@ include_once 'includes/message.php';
   <title>VoyaVerse</title>
 </head>
 <body>
+  
+<?php
+include_once 'includes/message.php';
+?>
+
 
 <div class="header">
   <?php

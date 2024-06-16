@@ -16,9 +16,9 @@ class databaseConnection{
 
   public function __construct(){
     $this->hostname = 'localhost';
-    $this->username = 'dfoiwidm_voyaverse';
+    $this->username = 'root';
     $this->password = '';
-    $this->dbname = 'dfoiwidm_voyaverse';
+    $this->dbname = 'voyaverse_sample';
 
     $this->conn = new mysqli($this->hostname, $this->username, $this->password, $this->dbname);
 
