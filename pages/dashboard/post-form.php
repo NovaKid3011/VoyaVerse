@@ -10,7 +10,7 @@ if(!isset($_SESSION['authenticated'])){
 ?>
 
 <html>
-<link rel="stylesheet" href="../../../VoyaVerseProject/css/manage/post.css">
+<link rel="stylesheet" href="../../css/manage/post.css">
 
 
 <main>
